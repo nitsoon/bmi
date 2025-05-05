@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.4s ease;
+    font-family: 'Vazir', sans-serif;
+  }
+  
+  body {
+    direction: rtl;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #e3f2fd, #ffffff);
+    color: #333;
+    flex-direction: column;
+    overflow: hidden;
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .clock-date {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .bmi-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 300px;
+    animation: slideUp 1s ease-in-out;
+  }
+  
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    padding: 12px 24px;
+    margin-top: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
+  
+  .result {
+    margin-top: 15px;
+    font-size: 1.2rem;
+  }
+  
+  .mode-buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .mode-buttons button {
+    font-size: 0.9rem;
+  }
+  
+  .loading-character {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    width: 60px;
+    height: 60px;
+    background: #ffcc00;
+    border-radius: 50%;
+    animation: bounce 1s infinite ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .loading-character .eyes {
+    position: absolute;
+    top: 18px;
+    display: flex;
+    gap: 6px;
+  }
+  
+  .loading-character .eyes::before,
+  .loading-character .eyes::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #000;
+    border-radius: 50%;
+  }
+  
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  

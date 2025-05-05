@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>محاسبه BMI + ساعت و تاریخ</title>
+  <link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="clock-date" id="clockDate"></div>
+
+  <div class="bmi-box">
+    <h2>محاسبه BMI</h2>
+    <input type="number" id="height" placeholder="قد (cm)" />
+    <input type="number" id="weight" placeholder="وزن (kg)" />
+    <button onclick="calculateBMI()">محاسبه</button>
+    <div class="result" id="result"></div>
+  </div>
+
+  <div class="mode-buttons">
+    <button onclick="setMode('light')">لایت مود</button>
+    <button onclick="setMode('dark')">دارک مود</button>
+    <button onclick="setMode('orange')">مود نارنجی</button>
+    <button onclick="setMode('red')">مود قرمز</button>
+  </div>
+
+  <div class="loading-character">
+    <div class="eyes"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
